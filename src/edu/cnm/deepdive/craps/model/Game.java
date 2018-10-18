@@ -41,7 +41,7 @@ private final Object lock = new Object();
     int total = dice[0] + dice[1];
     State state = this.state.roll(total, point);
     if (this.state == State.COME_OUT && state == State.POINT){
-
+      point = total;
     }
     this.state = state;
     synchronized (lock) {
